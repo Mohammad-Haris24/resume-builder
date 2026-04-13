@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+*{
+   font-family: "Oswald", sans-serif;
+}
+
+@layer base{
+   button {
+      @apply cursor-pointer;
+   }
+
+   input:not([type='checkbox']){
+    @apply outline-none focus:ring border border-gray-300 focus:ring-blue-500 focus:border-blue-500 rounded-lg;
+   }
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  #resume-preview, #resume-preview * {
+    visibility: visible !important;
+  }
+
+  #resume-preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white !important;
+  }
+
+  /* Hide scrollbars, margins, and non-resume elements */
+  .no-print {
+    display: none !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
