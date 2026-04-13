@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import Dashboard from "./pages/Dashboard";
 import ResumeBuilder from "./pages/ResumeBuilder";
-import Preview from "./pages/preview";
+import Preview from "./pages/Preview";
 import Login from "./pages/Login";
 import { useDispatch } from "react-redux";
 import api from "./configs/api";
